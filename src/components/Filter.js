@@ -8,6 +8,7 @@ const Filter = () => {
       {filterData.map((data) => {
         return (
           <button
+          className="filter-btn"
             key={data.id}
           >
             {data.title}
