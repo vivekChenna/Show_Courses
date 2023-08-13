@@ -1,8 +1,100 @@
-*{
-    margin : 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar{
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
+.navbar {
+  text-align: center;
+  color: white;
+  background-color: rgb(96, 11, 176);
+}
+
+.Loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid #0000;
+  border-right-color: #766df497;
+  position: relative;
+  animation: s4 1s infinite linear;
+}
+.custom-loader:before,
+.custom-loader:after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: inherit;
+  animation: inherit;
+  animation-duration: 2s;
+}
+.custom-loader:after {
+  animation-duration: 4s;
+}
+
+@keyframes s4 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.filter {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter > button {
+  width: max-content;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  padding: 0px 4px;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: rgb(18, 207, 18);
+  border-radius: 5px;
+}
+
+.cards {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: max-content;
+  box-shadow: 5px 5px 8px rgb(224, 220, 220);
+  border-radius: 5px;
+}
+
+.card > img {
+  height: 150px;
+  width: 240px;
+  aspect-ratio: 1/1;
+  background-size: cover;
 }

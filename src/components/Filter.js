@@ -1,9 +1,19 @@
 import React from "react";
 
+import { filterData } from "../data";
+
 const Filter = () => {
   return (
-    <div>
-      <h1>this is the filter component</h1>
+    <div className="filter">
+      {filterData.map((data) => {
+        return (
+          <button
+            key={data.id}
+          >
+            {data.title}
+          </button>
+        );
+      })}
     </div>
   );
 };
