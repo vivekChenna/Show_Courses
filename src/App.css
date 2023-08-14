@@ -123,6 +123,7 @@
 
 .like-btn-div {
   position: absolute;
+  border: 1px solid rgb(205, 169, 169);
   width: 35px;
   height: 35px;
   border-radius: 17px;
@@ -130,7 +131,7 @@
   align-items: center;
   justify-content: center;
   right: 4px;
-  bottom: 4px;
+  bottom: -6px;
   background-color: white;
 }
 .like-btn {

@@ -2,14 +2,22 @@ import React from "react";
 
 import { filterData } from "../data";
 
-const Filter = () => {
+const Filter = ({ setCategory, category }) => {
+  const FilterHandler = (title) => {
+    setCategory(title);
+  };
+
   return (
     <div className="filter">
       {filterData.map((data) => {
         return (
           <button
-          className="filter-btn"
+            onClick={() => FilterHandler(data.title)}
+            className="filter-btn"
             key={data.id}
+            style={
+              category === data.title ? { border: "3px solid yellow" } : null
+            }
           >
             {data.title}
           </button>
